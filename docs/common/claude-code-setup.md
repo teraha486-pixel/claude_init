@@ -12,8 +12,8 @@ git branch --show-current
 ```
 
 ### 커밋 작업자 이름
-- **작업자 이름: 근형** (복성 아님!)
-- 커밋 메시지: `[근형] 작업내용`
+- **작업자 이름: 태양** (복성 아님!)
+- 커밋 메시지: `[태양] 작업내용`
 - **Co-Authored-By 절대 금지!**
 
 ### docs 폴더 구조
@@ -286,8 +286,8 @@ https://nhnent.dooray.com/task/comment/{task_id}  (댓글 알림 링크)
 ### 위키 정보
 | 항목 | 값 |
 |------|-----|
-| 위키 ID | `3051057878725260241` |
-| 기본 페이지 | claude code (`4248918788553579171`) |
+| 위키 ID | `2802458678798138998` |
+| 기본 페이지 | claude wiki (`4271894589584642618`) |
 | URL 형식 | `https://nhnent.dooray.com/wiki/3051057873186173159/{page_id}` |
 
 ### 새 페이지 생성 시 필수 작업
@@ -296,7 +296,7 @@ https://nhnent.dooray.com/task/comment/{task_id}  (댓글 알림 링크)
 
 ```markdown
 # 작업 순서
-1. 새 페이지 생성 (parent_page_id: 4248918788553579171)
+1. 새 페이지 생성 (parent_page_id: 4271894589584642618)
 2. claude code 페이지 본문에 새 페이지 링크 추가
 ```
 

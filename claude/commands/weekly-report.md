@@ -4,16 +4,16 @@
 
 ## 기본 정보
 
-- **작성자**: 김근형 (선임)
-- **member_id**: `3051057870732905526`
+- **작성자**: 이태양 (선임)
+- **member_id**: `2802458672652277190`
 - **프로젝트 ID**: 2779708918315063486
 - **상위 업무**: 웹보드개발랩 주간 보고 2026 (`4238765017113021419`)
 - **주간보고 양식**: https://nhnent.dooray.com/project/pages/4238741434406678173
 
 ## 위키 정보 (주간보고 저장소)
 
-- **wiki_id**: `3051057878725260241`
-- **메인 페이지**: claude_weekly_report (`4250340996968691291`)
+- **wiki_id**: `2802458678798138998`
+- **메인 페이지**: claude_weekly_report (`4271895317877875305`)
 - **URL**: `https://nhnent.dooray.com/wiki/3051057873186173159/{page_id}`
 
 ## 🚨 주간보고 주(週) 경계 규칙 (절대 헷갈리면 안 됨!)
@@ -188,13 +188,13 @@ dooray://2774498989498246388/tasks/...  ← 다른 프로젝트ID 사용 금지!
    - 지난 주 업무 ID 확인
 ```
 
-### STEP 2: 지난 주 김근형 댓글 확인 (참고용)
+### STEP 2: 지난 주 이태양 댓글 확인 (참고용)
 
 ```
 1. 지난 주 주간보고 업무의 댓글 조회
    dooray_project_get_post_comments(project_id, post_id)
 
-2. 김근형(3051057870732905526) 댓글 찾기
+2. 이태양(2802458672652277190) 댓글 찾기
 
 3. 진행 중인 업무 파악:
    - 진행률 100% 미만인 업무 → 이번 주 계속 진행 가능
@@ -206,15 +206,15 @@ dooray://2774498989498246388/tasks/...  ← 다른 프로젝트ID 사용 금지!
 
 #### ⭐ 주간보고 위키 페이지 댓글 (가장 먼저 확인!)
 ```
-1. claude_weekly_report(4250340996968691291) 하위 페이지 목록 조회
-   get_child_wiki_list(wiki_id="3051057878725260241", parentPageId="4250340996968691291")
+1. claude_weekly_report(4271895317877875305) 하위 페이지 목록 조회
+   get_child_wiki_list(wiki_id="2802458678798138998", parentPageId="4271895317877875305")
 
 2. 이번 주 제목에 해당하는 페이지 찾기
    - "[포커서버팀] 주간보고 - {타겟 목요일 날짜}" 페이지
    - ⚠️ 주 경계: 금~목이 한 주! 오늘이 금요일이면 다음 목요일 날짜 페이지!
 
 3. 해당 페이지의 댓글 조회
-   get_wiki_page_comments(wiki_id="3051057878725260241", page_id="{찾은 페이지 ID}")
+   get_wiki_page_comments(wiki_id="2802458678798138998", page_id="{찾은 페이지 ID}")
 
 4. 댓글에 기록된 작업 내역을 보고서 작성의 기본 자료로 활용
    - /do 스킬이 작업할 때마다 남긴 댓글 (커밋, 작업 요약, 관련 링크)
@@ -227,15 +227,15 @@ dooray://2774498989498246388/tasks/...  ← 다른 프로젝트ID 사용 금지!
 ```bash
 # hangame-poker-server (--all 필수!)
 cd /Users/nhn/work/hangame-poker-server
-git log --all --author="김근형\|KIMGEUNHYUNG" --since="{시작일}" --until="{종료일+1}" --format="%h %s (%ad) [%D]" --date=short
+git log --all --author="이태양\|LEETAEYANG" --since="{시작일}" --until="{종료일+1}" --format="%h %s (%ad) [%D]" --date=short
 
 # gia-poker-admin
 cd /Users/nhn/work/gia/gia-poker-admin
-git log --all --author="김근형\|KIMGEUNHYUNG" --since="{시작일}" --until="{종료일+1}" --format="%h %s (%ad) [%D]" --date=short
+git log --all --author="이태양\|LEETAEYANG" --since="{시작일}" --until="{종료일+1}" --format="%h %s (%ad) [%D]" --date=short
 
 # gia-core
 cd /Users/nhn/work/gia/gia-core
-git log --all --author="김근형\|KIMGEUNHYUNG" --since="{시작일}" --until="{종료일+1}" --format="%h %s (%ad) [%D]" --date=short
+git log --all --author="이태양\|LEETAEYANG" --since="{시작일}" --until="{종료일+1}" --format="%h %s (%ad) [%D]" --date=short
 ```
 
 #### 두레이 업무
@@ -247,8 +247,8 @@ git log --all --author="김근형\|KIMGEUNHYUNG" --since="{시작일}" --until="
 
 #### 개인 위키 작업 문서
 ```
-- wiki_id: 3051057878725260241
-- parent_page_id: 4248918788553579171 (claude code)
+- wiki_id: 2802458678798138998
+- parent_page_id: 4271894589584642618 (claude code)
 - 하위 페이지들 조회하여 이번 주 작업 내역 확인
 ```
 
@@ -265,13 +265,12 @@ ls -la /Users/nhn/work/gia/gia-poker-admin/docs/
 ```
 1. 캘린더 목록 조회: get_my_calendars()
 2. 이번 주 일정 조회: get_all_events_of_calendars()
-   - 개인 캘린더: 3051057880790584417
-   - 포커서버팀: 3842792407803282659
+   - 개인 캘린더: 2802458680507427114
    - 웹보드개발랩: 2935428400867751158
    - 근태-포커사업팀: 2934647066272242745
 
 3. 휴가/오프 확인:
-   - [휴가]김근형, [오프]김근형, [연차]김근형 → 휴가 섹션에 기록
+   - [휴가]이태양, [오프]이태양, [연차]이태양 → 휴가 섹션에 기록
 
 4. 회의 확인:
    - 내가 참석자(me.user_type: "to" 또는 "from")인 일정 → 회의 섹션에 기록
@@ -280,7 +279,7 @@ ls -la /Users/nhn/work/gia/gia-poker-admin/docs/
 ### STEP 4: 위키 페이지 작성
 
 ```
-1. claude_weekly_report(4250340996968691291) 하위에 새 페이지 생성
+1. claude_weekly_report(4271895317877875305) 하위에 새 페이지 생성
 2. 제목: "[포커서버팀] 주간보고 - {YYYY}/{MM}/{DD}" (두레이 업무 제목과 동일!)
 3. 양식에 맞게 내용 작성
 ```
@@ -298,7 +297,7 @@ ls -la /Users/nhn/work/gia/gia-poker-admin/docs/
 ```
 1. 이번 주 보고서 작성 완료 후 자동 실행
 2. 다음 주 목요일 날짜 계산 (이번 주 목요일 + 7일)
-3. claude_weekly_report(4250340996968691291) 하위에 빈 페이지 생성
+3. claude_weekly_report(4271895317877875305) 하위에 빈 페이지 생성
 4. 제목: "[포커서버팀] 주간보고 - {YYYY}/{MM}/{DD}" (다음 주 목요일)
 5. 본문: 빈 내용 또는 최소 템플릿
 ```

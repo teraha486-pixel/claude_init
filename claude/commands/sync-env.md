@@ -119,7 +119,7 @@ ls -d ~/init/mcp/*/ 2>/dev/null | xargs -n1 basename
    ```bash
    cd ~/env
    git add -A
-   git commit -m "[근형] init 동기화: {변경내용 요약}"
+   git commit -m "[태양] init 동기화: {변경내용 요약}"
    git push origin main
    git reflog expire --expire=now --all && git gc --prune=now
    ```

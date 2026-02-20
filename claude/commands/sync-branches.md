@@ -46,8 +46,8 @@ git branch | grep feature
 ### STEP 1-1: 위키에서 브랜치별 작업 내용 확인 (conflict 해결 참고용)
 
 **위키 정보:**
-- wiki_id: `3051057878725260241`
-- 기본 페이지: claude code (`4248918788553579171`)
+- wiki_id: `2802458678798138998`
+- 기본 페이지: claude wiki (`4271894589584642618`)
 
 ```
 get_child_wiki_list(wiki_id, parent_page_id)

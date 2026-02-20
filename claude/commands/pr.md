@@ -149,7 +149,7 @@ GH_HOST=github.nhnent.com gh api repos/{org}/{repo}/pulls/{pr_number}/comments
 
 수정이 완료되면 사용자에게 커밋 여부 확인:
 - 커밋 시 `/commit` 스킬 활용
-- 커밋 메시지: `[근형] fix: PR 리뷰 반영 - {수정 요약}`
+- 커밋 메시지: `[태양] fix: PR 리뷰 반영 - {수정 요약}`
 
 ## 주의사항
 

@@ -99,7 +99,7 @@ crontab -e    # crontab 편집
 ```
 SERVER_URL=http://10.161.31.71:8012
 API_KEY=prod-secure-api-key-change-this
-USER_NAME=엔에이치엔_포커서버팀_김근형
+USER_NAME=엔에이치엔_포커사업팀_이태양
 ```
 
 ## 스크립트 위치

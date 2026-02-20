@@ -78,7 +78,7 @@ AI 기반 맞춤 식단/운동 관리 + 소셜 경쟁 플랫폼. 개인 프로�
 4. 코드 작성/수정
 5. **유닛테스트 업데이트 + 실행** (`cd /Users/nhn/work/salbival && node test-node.js`)
 6. 테스트 ALL PASS 확인 → 사용자에게 결과 보고
-7. **자동 커밋** (`[근형] {type}: {설명}`, Co-Authored-By 금지!)
+7. **자동 커밋** (`[태양] {type}: {설명}`, Co-Authored-By 금지!)
 8. **자동 푸시** + gc (`git push && git reflog expire --expire=now --all && git gc --prune=now`)
 9. docs 업데이트 (00_프로젝트_개요 히스토리 + 10_TODO 체크)
 
@@ -121,7 +121,7 @@ feature/*: 실제 작업 (여기서만 커밋)
 
 ## 커밋 규칙
 ```
-[근형] {type}: {설명}
+[태양] {type}: {설명}
 ```
 type: `feat` | `fix` | `refactor` | `style` | `docs` | `chore`
 **Co-Authored-By 절대 금지! 주간보고 댓글 안 남김 (개인 프로젝트)**

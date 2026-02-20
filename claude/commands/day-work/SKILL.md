@@ -10,7 +10,7 @@ description: 오늘 해야 할 일을 정리해주는 스킬. 두레이 업무(�
 
 ## 기본 정보
 
-- **member_id**: `3051057870732905526` (김근형)
+- **member_id**: `2802458672652277190` (이태양)
 - **조회 대상 프로젝트**:
   - 한게임포커통합-업데이트관리: `3287834850785742288`
   - 웹보드개발랩-전체공유: `2779708918315063486`
@@ -40,8 +40,7 @@ get_date_time_now()
 
 ```
 1. 오늘 일정 조회
-   - 개인 캘린더: 3051057880790584417
-   - 포커서버팀: 3842792407803282659
+   - 개인 캘린더: 2802458680507427114
    - 웹보드개발랩: 2935428400867751158
    - 근태-포커사업팀: 2934647066272242745
 
@@ -90,18 +89,18 @@ git -C /Users/nhn/work/gia log --oneline --since="{이전정기점검일}" --all
 - **Entity 변경**: `**/entity/**/*.java` 파일 수정 → DB 스키마 변경 가능성 (모든 커밋)
 - **인덱스 변경**: 커밋 메시지에 "index", "인덱스" 포함 (모든 커밋)
 - **GameData/Config 변경**: `resources*/GameData*`, `*Config*.json` 파일 수정 (모든 커밋)
-- **내 커밋**: 커밋 메시지에 "[근형]" 포함된 것 (기타 커밋용)
+- **내 커밋**: 커밋 메시지에 "[태양]" 포함된 것 (기타 커밋용)
 
 **중요**: DB/GameData 변경은 다른 작업자 커밋도 포함하여 표시
 - 표시 형식: `파일명 - 설명 (해시7자리, 작업자명)`
-- 예: `LasPokerConfig.json - 홀덤 룸최소머니 통일 (3cccdc2, 근형)`
+- 예: `LasPokerConfig.json - 홀덤 룸최소머니 통일 (3cccdc2, 태양)`
 
 **위키 문서 분석**:
 
 ```
 1. 개인 위키 조회
-   - wiki_id: 3051057878725260241
-   - 기본 페이지: claude code (4248918788553579171)
+   - wiki_id: 2802458678798138998
+   - 기본 페이지: claude wiki (4271894589584642618)
 
 2. 하위 문서 조회
    - get_child_wiki_list(wiki_id, parentPageId)
@@ -117,7 +116,7 @@ git -C /Users/nhn/work/gia log --oneline --since="{이전정기점검일}" --all
 
 ```
 get_task_list_with_param(project_id, task_query={
-  toMemberIds: "3051057870732905526",
+  toMemberIds: "2802458672652277190",
   postWorkflowClasses: "backlog,registered,working",
   order: "-updatedAt"
 })
@@ -127,7 +126,7 @@ get_task_list_with_param(project_id, task_query={
 
 ```
 get_task_list_with_param(project_id, task_query={
-  ccMemberIds: "3051057870732905526",
+  ccMemberIds: "2802458672652277190",
   updatedAt: "prev-7d",
   order: "-updatedAt"
 })

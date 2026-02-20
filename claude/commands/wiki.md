@@ -6,10 +6,10 @@
 **중요**: 두레이 업무에 직접 댓글 달지 않음 → 항상 위키에 초안 작성 → 사용자가 검토 후 복붙
 
 ## 위키 정보
-- **위키**: @zman 개인 위키
-- **wiki_id**: `3051057878725260241`
-- **기본 페이지**: claude code (`4248918788553579171`)
-- **URL 형식**: `https://nhnent.dooray.com/wiki/3051057873186173159/{page_id}`
+- **위키**: @teraha 개인 위키
+- **wiki_id**: `2802458678798138998`
+- **기본 페이지**: claude wiki (`4271894589584642618`)
+- **URL 형식**: `https://nhnent.dooray.com/wiki/2802458674191447213/{page_id}`
 
 ## 사용 시나리오
 
@@ -90,13 +90,13 @@ claude code 페이지의 하위 페이지 목록 조회
 
 ### 페이지 목록 조회
 ```
-dooray_wiki_list_pages(project_id="3051057878725260241", parent_page_id="{page_id}")
+dooray_wiki_list_pages(project_id="2802458678798138998", parent_page_id="{page_id}")
 ```
 
 ### 페이지 생성
 ```
 dooray_wiki_create_page(
-    wiki_id="3051057878725260241",
+    wiki_id="2802458678798138998",
     parent_page_id="{parent_id}",
     subject="{제목}",
     body="{내용}"
@@ -105,13 +105,13 @@ dooray_wiki_create_page(
 
 ### 페이지 조회
 ```
-dooray_wiki_get_page(project_id="3051057878725260241", page_id="{page_id}")
+dooray_wiki_get_page(project_id="2802458678798138998", page_id="{page_id}")
 ```
 
 ### 페이지 수정
 ```
 dooray_wiki_update_page(
-    wiki_id="3051057878725260241",
+    wiki_id="2802458678798138998",
     page_id="{page_id}",
     subject="{제목}",
     body="{내용}"
