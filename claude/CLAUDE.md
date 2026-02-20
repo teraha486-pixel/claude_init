@@ -95,6 +95,13 @@ cd /Users/nhn/work/betting_base && JAVA_HOME=$(/usr/libexec/java_home -v 17) ./m
 cd /Users/nhn/work/hangame-poker-server && JAVA_HOME=$(/usr/libexec/java_home -v 11) /Users/nhn/work/maven/apache-maven-3.6.3/bin/mvn -B clean compile install -DskipTests -Plocal
 ```
 
+## 두레이 개인 공간
+- **개인 프로젝트**: `https://nhnent.dooray.com/project/2802458674191447213/tasks` (project_id: `2802458674191447213`)
+- **개인 위키**: @teraha (`wiki_id: 2802458678798138998`)
+  - 홈 페이지: `2802458679735961551`
+  - claude wiki: `4271894589584642618`
+  - URL 형식: `https://nhnent.dooray.com/wiki/2802458674191447213/{page_id}`
+
 ## 위키 작업 문서 규칙 (/wiki)
 작업 진행 시 두레이 위키에 문서 작성 → 사용자가 복붙하는 방식
 
