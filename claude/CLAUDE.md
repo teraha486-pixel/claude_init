@@ -96,6 +96,12 @@ cd /Users/nhn/work/betting_base && JAVA_HOME=$(/usr/libexec/java_home -v 17) ./m
 cd /Users/nhn/work/hangame-poker-server && JAVA_HOME=$(/usr/libexec/java_home -v 11) /Users/nhn/work/maven/apache-maven-3.6.3/bin/mvn -B clean compile install -DskipTests -Plocal
 ```
 
+## 두레이 주요 프로젝트 참조
+
+### QA 관련 (QA 작업/조회/현황 요청 시 항상 이 두 프로젝트 참조)
+- **pc포커-bts**: project_id `1567704068379919418`
+- **포커클래식-QA**: project_id `2378020467797929507`
+
 ## 두레이 개인 공간
 - **개인 프로젝트**: `https://nhnent.dooray.com/project/2802458674191447213/tasks` (project_id: `2802458674191447213`)
 - **개인 위키**: @teraha (`wiki_id: 2802458678798138998`)
