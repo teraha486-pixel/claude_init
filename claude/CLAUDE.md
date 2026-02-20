@@ -156,6 +156,12 @@ claude code/
 ## 스킬 적극 활용 (필수)
 작업 시 관련 스킬이 있으면 **반드시 호출**해서 사용
 
+### ⚠️ Anthropic 스킬 호출 방식 주의
+- Skill 도구가 xlsx/docx/pptx 등을 **인식 못하는 경우**가 있음
+- 이 경우 **SKILL.md를 직접 읽고** 가이드에 따라 작업 진행 (사용자가 언급 안 해도 자동으로)
+- 스킬 경로: `C:\Users\NHN\.claude\plugins\marketplaces\anthropic-agent-skills\skills\{스킬명}\SKILL.md`
+- Python 실행: `C:\Users\NHN\.local\bin\uv.exe run --with {패키지} python {스크립트}`
+
 ### 업무 스킬 (커스텀)
 | 스킬 | 용도 | 언제 사용 |
 |------|------|----------|
@@ -201,4 +207,4 @@ claude code/
 
 ### 스킬 저장소
 - **커스텀 스킬**: `~/init/claude/commands/`
-- **Anthropic 스킬**: `/Users/nhn/work/anthropic-skills/skills/`
+- **Anthropic 스킬 (Windows)**: `C:\Users\NHN\.claude\plugins\marketplaces\anthropic-agent-skills\skills\`
