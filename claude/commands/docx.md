@@ -1,0 +1,1 @@
+/Users/nhn/work/anthropic-skills/skills/docx/SKILL.md

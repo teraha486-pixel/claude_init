@@ -1,0 +1,1 @@
+/Users/nhn/work/anthropic-skills/skills/frontend-design/SKILL.md

@@ -1,0 +1,89 @@
+{
+  "mcpServers": {
+    "dooray-mcp": {
+      "command": "/Users/nhn/init/mcp/dooray-mcp/.venv/bin/python",
+      "args": [
+        "/Users/nhn/init/mcp/dooray-mcp/main.py"
+      ],
+      "env": {
+        "DOORAY_API_KEY": "ajjt1imxmtj4:jcrO-7pvT1eSkqBcWNxc9Q",
+        "DOORAY_BASE_URL": "https://api.dooray.com"
+      }
+    },
+    "elasticsearch-real": {
+      "command": "/Users/nhn/.local/bin/elasticsearch-mcp-server-es7",
+      "args": [],
+      "env": {
+        "ELASTICSEARCH_HOSTS": "http://10.160.119.111:10910",
+        "ELASTICSEARCH_USERNAME": "elastic",
+        "ELASTICSEARCH_PASSWORD": "nhn1234!@#$"
+      }
+    },
+    "mysql-dev-game": {
+      "command": "/Users/nhn/.local/bin/mysql_mcp_server",
+      "args": [],
+      "env": {
+        "MYSQL_HOST": "10.162.5.170",
+        "MYSQL_PORT": "13306",
+        "MYSQL_USER": "HCARDP_GAME2",
+        "MYSQL_PASSWORD": "nhn1234!@#$",
+        "MYSQL_DATABASE": "hcardp_game"
+      }
+    },
+    "mysql-alpha-game": {
+      "command": "/Users/nhn/.local/bin/mysql_mcp_server",
+      "args": [],
+      "env": {
+        "MYSQL_HOST": "10.162.5.51",
+        "MYSQL_PORT": "13306",
+        "MYSQL_USER": "HCARDP_GAME2",
+        "MYSQL_PASSWORD": "nhn1234!@#$",
+        "MYSQL_DATABASE": "hcardp_game"
+      }
+    },
+    "mysql-alpha-log": {
+      "command": "/Users/nhn/.local/bin/mysql_mcp_server",
+      "args": [],
+      "env": {
+        "MYSQL_HOST": "5c5f2aab-dfed-434c-9ab0-becb8c89d68b.internal.kr1.mysql.rds.nhncloudservice.com",
+        "MYSQL_PORT": "13306",
+        "MYSQL_USER": "hangame_logapp",
+        "MYSQL_PASSWORD": "logapp!A",
+        "MYSQL_DATABASE": "hangame_logdb_alpha"
+      }
+    },
+    "mysql-real-game": {
+      "command": "/Users/nhn/.local/bin/mysql_mcp_server",
+      "args": [],
+      "env": {
+        "MYSQL_HOST": "10.170.53.42",
+        "MYSQL_PORT": "13306",
+        "MYSQL_USER": "sqlgw",
+        "MYSQL_PASSWORD": "newplay0801)*)!",
+        "MYSQL_DATABASE": "hcardp_game"
+      }
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    },
+    "pptx": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "office-powerpoint-mcp-server",
+        "ppt_mcp_server"
+      ]
+    }
+  }
+}
