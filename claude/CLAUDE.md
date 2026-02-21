@@ -109,6 +109,11 @@ cd /Users/nhn/work/hangame-poker-server && JAVA_HOME=$(/usr/libexec/java_home -v
 ## 두레이 개인 공간
 - **개인 프로젝트**: `https://nhnent.dooray.com/project/2802458674191447213/tasks` (project_id: `2802458674191447213`)
 - **개인 위키**: @teraha (`wiki_id: 2802458678798138998`)
+
+### ⚠️ 개인 프로젝트 업무 등록 규칙 (절대 준수)
+- 담당자: **이태양(본인)만** 등록
+- 참조자(CC): **절대 추가 금지**
+- 다른 사람 정보가 있어도 개인 프로젝트에는 오직 본인만 포함
   - 홈 페이지: `2802458679735961551`
   - claude wiki: `4271894589584642618`
   - URL 형식: `https://nhnent.dooray.com/wiki/2802458674191447213/{page_id}`
