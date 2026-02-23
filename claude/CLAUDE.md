@@ -181,7 +181,7 @@ claude code/
 | `/dooray-calendar` | 두레이 캘린더 | 일정 조회/생성/삭제 시 |
 | `/dooray-messenger` | 두레이 메신저 | 채널/1:1 메시지 전송 시 |
 | `/dooray-drive` | 두레이 드라이브 | 파일 업로드/조회 시 |
-| `/weekly-report` | PM 주간보고 위키 자동 작성 | 개인 위키 주간보고 페이지 생성 시 |
+| `/weekly-report` | 주간보고 위키 자동 작성 | 개인 위키 주간보고 페이지 생성 시 |
 | `/sync-gamedata` | GameData 동기화 | 게임 데이터 Zone 동기화 시 |
 | `/build-*` | 프로젝트 빌드 | 코드 수정 후 빌드 확인 시 |
 | `/hps-run` | IntelliJ 실행 설정 | 서버 실행 설정 안내 시 |
