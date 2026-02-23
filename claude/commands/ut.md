@@ -1,3 +1,0 @@
-ultrathink
-
-$ARGUMENTS

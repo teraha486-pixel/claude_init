@@ -1,1 +1,0 @@
-/Users/nhn/work/anthropic-skills/skills/webapp-testing/SKILL.md
