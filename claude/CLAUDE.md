@@ -156,7 +156,7 @@ claude code/
 
 ## 문서 구분
 - **팀 공용** (수정 금지): 프로젝트 저장소의 `CLAUDE.md`
-- **개인 문서**: `~/init/` (https://github.com/zman-lab/init)
+- **개인 문서**: `~/init/` (https://github.com/teraha486-pixel/claude_init)
 
 ## 워킹 디렉토리
 - 항상 `/Users/nhn/work/`에서 작업 시작
