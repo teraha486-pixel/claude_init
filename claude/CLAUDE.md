@@ -81,21 +81,6 @@
 ## 응답 언어
 - **항상 한글로 응답**: 사용자가 영어나 다른 언어로 질문해도 반드시 한글로 답변
 
-## 필수 참조 문서 (작업 전 확인)
-- **빌드 가이드**: `~/init/docs/vscode/{프로젝트명}.md`
-- **작업 규칙**: `~/init/docs/common/claude-code-setup.md`
-
-## 빌드 순서 (필수)
-```bash
-# GIA: gia-core 먼저 빌드
-cd /Users/nhn/work/gia/gia-core && JAVA_HOME=$(/usr/libexec/java_home -v 17) /Users/nhn/work/maven/apache-maven-3.6.3/bin/mvn compile -DskipTests
-cd /Users/nhn/work/gia/gia-poker-admin && JAVA_HOME=$(/usr/libexec/java_home -v 17) /Users/nhn/work/maven/apache-maven-3.6.3/bin/mvn compile -DskipTests
-
-# hangame-poker-server: betting_base 먼저 빌드
-cd /Users/nhn/work/betting_base && JAVA_HOME=$(/usr/libexec/java_home -v 17) ./mvnw compile -DskipTests
-cd /Users/nhn/work/hangame-poker-server && JAVA_HOME=$(/usr/libexec/java_home -v 11) /Users/nhn/work/maven/apache-maven-3.6.3/bin/mvn -B clean compile install -DskipTests -Plocal
-```
-
 ## 두레이 주요 프로젝트 참조
 
 ### 업무 진행 프로젝트 (업무 조회/주간 보고 시 항상 이 두 프로젝트 참조)
@@ -176,15 +161,6 @@ claude code/
 ## 워킹 디렉토리
 - 항상 `/Users/nhn/work/`에서 작업 시작
 - 세션 시작 시 작업할 프로젝트의 `CLAUDE.md` 확인
-
-## 클라이언트 코드 분석 (서버 작업 시)
-- **경로**: `/Users/nhn/work/hangame-poker-unity`
-- **적용 시점**: `/wiki`, `/do` 스킬 사용 시 클라이언트 영향도 함께 분석
-- **작업 흐름**:
-  1. 서버 작업 전 `git pull` (클라 코드 최신화)
-  2. 서버 + 클라 양쪽 코드 분석
-  3. 위키 문서에 클라이언트 수정 가이드 포함 (파일, 메서드, 줄 번호)
-- **주의**: 클라이언트 코드는 **분석만**, 절대 수정 금지
 
 ## 스킬 적극 활용 (필수)
 작업 시 관련 스킬이 있으면 **반드시 호출**해서 사용
