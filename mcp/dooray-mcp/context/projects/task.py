@@ -122,7 +122,7 @@ async def get_detail_of_task(project_id: str, post_id: str):
                 "description":
                 """
                 task id extracted from Dooray URL.
-                Example: from https://nhnent.dooray.com/project/tasks/4250956460840339598, use 4250956460840339598
+                Example: from https://nhnent.dooray.com/project/tasks/1234567890123456789, use 1234567890123456789
                 """
             }
         },
@@ -166,8 +166,8 @@ async def get_full_detail_of_task(project_id: str, post_id: str):
     post_id만으로 업무의 전체 상세 정보를 조회합니다.
     워크플로우 상태, 등록자, 담당자, 참조자, 태그, 마일스톤, 만기일, 첨부파일, 생성일, 수정일 등 모든 정보를 포함합니다.
 
-    두레이 업무 URL (예: https://nhnent.dooray.com/project/tasks/4243834720195168596)에서
-    업무 ID(4243834720195168596)를 추출하여 사용할 수 있습니다.
+    두레이 업무 URL (예: https://nhnent.dooray.com/project/tasks/1234567890123456789)에서
+    업무 ID(1234567890123456789)를 추출하여 사용할 수 있습니다.
 
     일반 get_detail_of_task_by_id보다 더 상세한 정보가 필요할 때 사용하세요.
     """,

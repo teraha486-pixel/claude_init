@@ -118,8 +118,8 @@ async def get_wiki_page_content(wiki_id: str, page_id: str):
     페이지 ID만으로 두레이 위키 페이지의 상세 정보를 조회합니다.
     wiki_id 없이 페이지 ID만 알면 조회할 수 있습니다.
 
-    두레이 위키 URL (예: https://nhnent.dooray.com/wiki/3051057873186173159/4248918788553579171)에서
-    마지막 숫자(4248918788553579171)가 page_id입니다.
+    두레이 위키 URL (예: https://nhnent.dooray.com/wiki/{wiki_id}/{page_id})에서
+    마지막 숫자({page_id})가 page_id입니다.
     """,
     inputSchema={
         "type": "object",
