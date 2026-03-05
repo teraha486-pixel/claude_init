@@ -21,16 +21,44 @@
 **한 주 = 금요일 ~ 다음 목요일**
 
 - 보고서 제목 날짜 = 해당 주의 **마지막 날(목요일)**
-- **판단 공식**:
+- **판단 공식** (반드시 아래 순서대로 실행 후 검증):
   ```python
   from datetime import date, timedelta
+
+  WEEKDAY_KR = ['월', '화', '수', '목', '금', '토', '일']
+
   today = date.today()
+  # ① 오늘 요일 반드시 출력 (착각 방지)
+  print(f"오늘: {today} ({WEEKDAY_KR[today.weekday()]}요일, weekday={today.weekday()})")
+
+  # ② 이번 주 목요일 계산
   days_ahead = (3 - today.weekday()) % 7
   target_thursday = today if days_ahead == 0 else today + timedelta(days=days_ahead)
+
+  # ③ 주간 범위 계산
   week_start = target_thursday - timedelta(days=6)  # 금요일
   week_end = target_thursday                         # 목요일
+
+  # ④ 검증 (반드시 통과해야 함)
+  assert week_start.weekday() == 4, f"오류: week_start({week_start})가 금요일이 아님!"
+  assert week_end.weekday() == 3,   f"오류: week_end({week_end})가 목요일이 아님!"
+
+  print(f"이번 주: {week_start.month}/{week_start.day}(금) ~ {week_end.month}/{week_end.day}(목)")
   ```
-- 예: 오늘이 월(2/23) → 이번 주 금(2/20) ~ 목(2/26), 목요일 날짜(2/26)가 보고서 날짜
+
+- **요일별 계산 예시** (혼동 방지):
+
+  | 오늘 | weekday | days_ahead | 이번 주 목요일 | 주간 범위 |
+  |------|---------|-----------|--------------|---------|
+  | 금요일 | 4 | 6 | +6일 후 | 오늘(금) ~ +6(목) |
+  | 토요일 | 5 | 5 | +5일 후 | 전날(금) ~ +5(목) |
+  | 일요일 | 6 | 4 | +4일 후 | -1(금) ~ +4(목) |
+  | 월요일 | 0 | 3 | +3일 후 | -2(금) ~ +3(목) |
+  | 화요일 | 1 | 2 | +2일 후 | -3(금) ~ +2(목) |
+  | 수요일 | 2 | 1 | +1일 후 | -4(금) ~ +1(목) |
+  | **목요일** | **3** | **0** | **오늘** | **-6일(금) ~ 오늘(목)** |
+
+- 예: 오늘이 목(3/5) → `days_ahead=0` → 목요일=3/5, 주간=2/27(금)~3/5(목)
 
 ## 보고서 제목 형식
 
@@ -47,10 +75,14 @@
 ### STEP 1. 현재 날짜 및 주간 기간 확인
 
 ```
-1. get_date_time_now() 으로 오늘 날짜 확인
-2. 위 공식으로 이번 주 시작(금요일) ~ 종료(목요일) 계산
-3. 이번 주 기간: {week_start} ~ {week_end}
+1. 오늘 날짜와 요일을 확인한다 (시스템 컨텍스트 또는 get_date_time_now() 사용)
+   → 반드시 "YYYY-MM-DD (X요일)" 형식으로 명시할 것
+2. 위 공식(assert 포함)으로 이번 주 시작(금요일) ~ 종료(목요일) 계산
+3. week_start가 금요일인지, week_end가 목요일인지 재확인
+4. 이번 주 기간: {week_start}(금) ~ {week_end}(목)
 ```
+
+⚠️ **오늘 요일을 착각하면 날짜가 1~2일 틀어짐. assert가 실패하면 공식을 다시 점검할 것.**
 
 ### STEP 2. 기존 보고서 형식 참조
 
