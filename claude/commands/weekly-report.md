@@ -206,6 +206,20 @@ https://nhnent.dooray.com/wiki/2802458674191447213/{생성된 page_id}
 
 ## 링크 작성 규칙 (반드시 준수)
 
+### Task ID 확인 (가장 중요!)
+
+⚠️ **`get_task_list_with_param`의 `-postUpdatedAt` 정렬 조회 결과에서 반환되는 `id`가 실제 업무 ID와 다를 수 있음.**
+
+**반드시 `postNumber`로 개별 재조회하여 정확한 ID를 확인할 것:**
+```
+get_task_list_with_param(project_id="...", task_query={"postNumber": "2409"})
+→ 응답의 "id" 필드가 dooray:// 링크에 사용할 정확한 task ID
+```
+
+링크에 사용할 ID는 반드시 `postNumber` 조회로 확인된 ID만 사용한다.
+
+### dooray:// 링크 형식
+
 ```markdown
 ✅ 올바른 형식:
 [한게임포커통합-기획/2406 &#91;보고&#93; 한게임포커 규제 완화 현황 보고](dooray://1387695619080878080/tasks/4274034807799806684 "registered")
@@ -217,9 +231,10 @@ dooray://2154308066225877450/tasks/...  ← 프로젝트 ID 금지, 조직 ID �
 ```
 
 **체크리스트:**
-1. 모든 `dooray://` URL이 `1387695619080878080` (조직 ID) 으로 시작하는가?
-2. 업무 제목의 `[`, `]` 를 `&#91;`, `&#93;` 로 변환했는가?
-3. URL 끝에 `"working"`, `"registered"`, `"closed"`, `"backlog"` 등 상태값이 있는가?
+1. 모든 task ID를 `postNumber` 조회로 확인했는가?
+2. 모든 `dooray://` URL이 `1387695619080878080` (조직 ID) 으로 시작하는가?
+3. 업무 제목의 `[`, `]` 를 `&#91;`, `&#93;` 로 변환했는가?
+4. URL 끝에 `"working"`, `"registered"`, `"closed"`, `"backlog"` 등 상태값이 있는가?
 
 ## 섹션 1 필터링 예시
 
